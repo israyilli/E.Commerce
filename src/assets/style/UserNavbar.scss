@@ -1,0 +1,62 @@
+.bigContainer {
+    width: 1180px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // padding: 2rem;
+    background: transparent;
+    .userNavbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        div {
+
+            h1 {
+                max-width: 200px;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+            }
+
+            ul {
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0;
+
+                li {
+                    margin: 0;
+                    padding: 0;
+                    line-height: 100px;
+                    padding: 0 17px;
+
+                    :hover {
+                        color: #74a84a;
+                        ;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: #000000;
+                        font-family: Roboto, sans-serif;
+                        font-weight: inherit;
+                    }
+                }
+
+                .bag {
+                    padding-right: 0;
+
+                    sup {
+                        background-color: black;
+                        color: white;
+                        padding: 4px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
