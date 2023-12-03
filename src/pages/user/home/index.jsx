@@ -180,7 +180,6 @@ function Home() {
         </div>
       </section>
       <hr />
-<UserFooter/>
       
     </>
   );

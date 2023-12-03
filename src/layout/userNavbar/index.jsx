@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../../assets/style/userNavbar.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faBagShopping,faUser } from "@fortawesome/free-solid-svg-icons";
-function userNavbar() {
+function UserNavbar() {
   return (
     <>
      <div className="bigContainer">
@@ -44,4 +44,4 @@ function userNavbar() {
   );
 }
 
-export default userNavbar;
+export default UserNavbar;
