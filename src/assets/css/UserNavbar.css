@@ -12,37 +12,41 @@
   align-items: center;
   width: 100%;
 }
-.bigContainer .userNavbar div h1 {
-  max-width: 200px;
+.bigContainer .userNavbar h1 a {
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  font-weight: 700;
+  letter-spacing: 3px;
+  font-size: 25px;
+  text-decoration: none;
+  color: black;
 }
-.bigContainer .userNavbar div ul {
+.bigContainer .userNavbar ul {
   list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0;
 }
-.bigContainer .userNavbar div ul li {
+.bigContainer .userNavbar ul li {
   margin: 0;
   padding: 0;
   line-height: 100px;
-  padding: 0 17px;
+  padding: 0 20px;
 }
-.bigContainer .userNavbar div ul li :hover {
+.bigContainer .userNavbar ul li :hover {
   color: #74a84a;
 }
-.bigContainer .userNavbar div ul li a {
+.bigContainer .userNavbar ul li a {
   text-decoration: none;
   color: #000000;
   font-family: Roboto, sans-serif;
   font-weight: inherit;
+  letter-spacing: 2px;
 }
-.bigContainer .userNavbar div ul .bag {
+.bigContainer .userNavbar ul .bag {
   padding-right: 0;
 }
-.bigContainer .userNavbar div ul .bag sup {
+.bigContainer .userNavbar ul .bag sup {
   background-color: black;
   color: white;
   padding: 4px;

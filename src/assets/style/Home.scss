@@ -65,6 +65,26 @@
             width: 353px;
             height: 353px;
             margin-bottom: 13.6px;
+            position: relative;
+
+            :hover {
+                .addToCart {
+                    display: block;
+
+                }
+            }
+
+            button {
+                position: absolute;
+                right: 15px;
+                top: 15px;
+                background-color: white;
+                border-radius: 50%;
+                padding: 10px;
+                border: none;
+                display: none;
+
+            }
 
             img {
                 object-fit: cover;
@@ -248,7 +268,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-padding: 2rem;
+        padding: 2rem;
+
         ul {
             list-style: none;
             margin: 0;

@@ -8,7 +8,9 @@ function UserNavbar() {
     <>
      <div className="bigContainer">
      <div className="userNavbar">
-        <h1>EARTH STORE</h1>
+        <h1>
+        <Link to="/">EARTH STORE</Link>
+        </h1>
         <div>
           <ul>
             <li>
@@ -26,14 +28,14 @@ function UserNavbar() {
             <li className="bag">
               <Link to="/basket">
               <span>
-              <FontAwesomeIcon icon={faBagShopping} style={{ color: "#2C541D",fontSize: "20px"}} />
+              <FontAwesomeIcon icon={faBagShopping} style={{ color: "black",fontSize: "20px"}} />
               </span>
               </Link>
               <sup>0</sup>
             </li>
             <li>
               <Link to="/login">
-              <FontAwesomeIcon icon={faUser}  style={{ color: "#2C541D", fontSize: "20px"}} />
+              <FontAwesomeIcon icon={faUser}  style={{ color: "black", fontSize: "20px"}} />
               </Link>
             </li>
           </ul>
