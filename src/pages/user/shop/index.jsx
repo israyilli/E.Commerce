@@ -5,14 +5,7 @@ import Box from "@mui/material/Box";
 import { render } from "react-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faQuoteLeft,
-  faLock,
-  faBox,
-  faHand,
-  faBagShopping,
-} from "@fortawesome/free-solid-svg-icons";
-// import { magnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faQuoteLeft,faLock,faBox,faHand,faBagShopping } from "@fortawesome/free-solid-svg-icons";
 import Icon, { SearchOutlined } from "@ant-design/icons";
 
 function Shop() {

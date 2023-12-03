@@ -19,7 +19,8 @@ export const routes = [
         element: <Home />,
       },
       {
-        path: "home/:id",
+        // path: "home/:id",
+        path: "detail",
         element: <Detail />,
       },
       {
