@@ -1,12 +1,14 @@
 import React from "react";
-import Navbar from "../../../layout/userNavbar";
+import UserNavbar from "../../../layout/userNavbar";
 import { Outlet } from "react-router-dom";
+import UserFooter from "../../../layout/userFooter";
 
 function UserRoot() {
   return (
     <div>
-      <Navbar />
+      <UserNavbar />
       <Outlet />
+      <UserFooter/>
     </div>
   );
 }
