@@ -3,7 +3,15 @@ import "../../../assets/style/Shop.scss";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import { render } from "react-dom";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faQuoteLeft,
+  faLock,
+  faBox,
+  faHand,
+  faBagShopping,
+} from "@fortawesome/free-solid-svg-icons";
 // import { magnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import Icon, { SearchOutlined } from "@ant-design/icons";
 
@@ -103,6 +111,12 @@ function Shop() {
                   <Grid item xs={4}>
                     <div className="card">
                       <div className="imgWrapper">
+                        <button>
+                          <FontAwesomeIcon
+                            icon={faBagShopping}
+                            style={{ color: "#2C541D", fontSize: "15px" }}
+                          />
+                        </button>
                         <img
                           src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster5-1000x1000.jpg"
                           alt=""
@@ -119,6 +133,12 @@ function Shop() {
                   <Grid item xs={4}>
                     <div className="card">
                       <div className="imgWrapper">
+                        <button>
+                          <FontAwesomeIcon
+                            icon={faBagShopping}
+                            style={{ color: "#2C541D", fontSize: "15px" }}
+                          />
+                        </button>
                         <img
                           src="	https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster6-1000x1000.jpg"
                           alt=""
@@ -135,6 +155,12 @@ function Shop() {
                   <Grid item xs={4}>
                     <div className="card">
                       <div className="imgWrapper">
+                        <button>
+                          <FontAwesomeIcon
+                            icon={faBagShopping}
+                            style={{ color: "#2C541D", fontSize: "15px" }}
+                          />
+                        </button>
                         <img
                           src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster4-1000x1000.jpg"
                           alt=""
@@ -151,6 +177,12 @@ function Shop() {
                   <Grid item xs={4}>
                     <div className="card">
                       <div className="imgWrapper">
+                        <button>
+                          <FontAwesomeIcon
+                            icon={faBagShopping}
+                            style={{ color: "#2C541D", fontSize: "15px" }}
+                          />
+                        </button>
                         <img
                           src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster5-1000x1000.jpg"
                           alt=""
@@ -166,6 +198,12 @@ function Shop() {
                   <Grid item xs={4}>
                     <div className="card">
                       <div className="imgWrapper">
+                        <button>
+                          <FontAwesomeIcon
+                            icon={faBagShopping}
+                            style={{ color: "#2C541D", fontSize: "15px" }}
+                          />
+                        </button>
                         <img
                           src="	https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster6-1000x1000.jpg"
                           alt=""
@@ -181,6 +219,12 @@ function Shop() {
                   <Grid item xs={4}>
                     <div className="card">
                       <div className="imgWrapper">
+                        <button>
+                          <FontAwesomeIcon
+                            icon={faBagShopping}
+                            style={{ color: "#2C541D", fontSize: "15px" }}
+                          />
+                        </button>
                         <img
                           src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster4-1000x1000.jpg"
                           alt=""
@@ -196,6 +240,12 @@ function Shop() {
                   <Grid item xs={4}>
                     <div className="card">
                       <div className="imgWrapper">
+                        <button>
+                          <FontAwesomeIcon
+                            icon={faBagShopping}
+                            style={{ color: "#2C541D", fontSize: "15px" }}
+                          />
+                        </button>
                         <img
                           src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster5-1000x1000.jpg"
                           alt=""
@@ -211,6 +261,12 @@ function Shop() {
                   <Grid item xs={4}>
                     <div className="card">
                       <div className="imgWrapper">
+                        <button>
+                          <FontAwesomeIcon
+                            icon={faBagShopping}
+                            style={{ color: "#2C541D", fontSize: "15px" }}
+                          />
+                        </button>
                         <img
                           src="	https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster6-1000x1000.jpg"
                           alt=""
@@ -226,6 +282,12 @@ function Shop() {
                   <Grid item xs={4}>
                     <div className="card">
                       <div className="imgWrapper">
+                        <button>
+                          <FontAwesomeIcon
+                            icon={faBagShopping}
+                            style={{ color: "#2C541D", fontSize: "15px" }}
+                          />
+                        </button>
                         <img
                           src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster4-1000x1000.jpg"
                           alt=""

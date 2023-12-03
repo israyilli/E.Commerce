@@ -170,10 +170,24 @@
   font-family: "Roboto", sans-serif;
   color: #586073;
 }
+.shop .container .right .allProducts .card .imgWrapper:hover button {
+  display: block;
+}
 .shop .container .right .allProducts .card .imgWrapper {
   width: 252px;
   height: 252px;
   margin-bottom: 13.6px;
+  position: relative;
+}
+.shop .container .right .allProducts .card .imgWrapper button {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  border: none;
+  display: none;
 }
 .shop .container .right .allProducts .card .imgWrapper img {
   object-fit: cover;

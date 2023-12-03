@@ -214,10 +214,28 @@
 
             .allProducts {
                 .card {
+                    .imgWrapper:hover button {
+                        display: block;
+                    }
+
                     .imgWrapper {
                         width: 252px;
                         height: 252px;
                         margin-bottom: 13.6px;
+                        position: relative;
+
+                        button {
+                            position: absolute;
+                            right: 15px;
+                            top: 15px;
+                            background-color: white;
+                            border-radius: 50%;
+                            padding: 10px;
+                            border: none;
+                            display: none;
+
+                        }
+
 
                         img {
                             object-fit: cover;

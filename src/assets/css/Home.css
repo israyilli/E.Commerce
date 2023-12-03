@@ -54,14 +54,14 @@
   width: 1140px;
   margin: auto;
 }
+.homeCards .container .imgWrapper:hover button {
+  display: block;
+}
 .homeCards .container .imgWrapper {
   width: 353px;
   height: 353px;
   margin-bottom: 13.6px;
   position: relative;
-}
-.homeCards .container .imgWrapper :hover .addToCart {
-  display: block;
 }
 .homeCards .container .imgWrapper button {
   position: absolute;

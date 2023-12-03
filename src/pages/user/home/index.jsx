@@ -25,7 +25,7 @@ function Home() {
               <Grid item xs={4} >
                 <div className="card1">
                   <div className="imgWrapper">
-                    <button className="addToCart">
+                    <button>
                     <FontAwesomeIcon icon={faBagShopping}  style={{ color: "#2C541D" ,fontSize:"15px"}} />
                     </button>
                     <img
@@ -43,6 +43,10 @@ function Home() {
               <Grid item xs={4}>
                 <div className="card2">
                   <div className="imgWrapper">
+                  <button>
+                    <FontAwesomeIcon icon={faBagShopping}  style={{ color: "#2C541D" ,fontSize:"15px"}} />
+                    </button>
+
                     <img
                       src="	https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster6-1000x1000.jpg"
                       alt=""
@@ -58,6 +62,10 @@ function Home() {
               <Grid item xs={4}>
                 <div className="card3">
                   <div className="imgWrapper">
+                  <button>
+                    <FontAwesomeIcon icon={faBagShopping}  style={{ color: "#2C541D" ,fontSize:"15px"}} />
+                    </button>
+                    
                     <img
                       src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster4-1000x1000.jpg"
                       alt=""
