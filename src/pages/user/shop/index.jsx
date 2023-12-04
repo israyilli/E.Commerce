@@ -3,7 +3,7 @@ import "../../../assets/style/Shop.scss";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import { render } from "react-dom";
-
+import { HeartOutlined } from "@ant-design/icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faQuoteLeft,
@@ -116,6 +116,9 @@ function Shop() {
                             style={{ color: "#2C541D", fontSize: "15px" }}
                           />
                         </button>
+                        <button className="heart">
+                          <HeartOutlined />
+                        </button>
                         <img
                           src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster5-1000x1000.jpg"
                           alt=""
@@ -138,6 +141,9 @@ function Shop() {
                             style={{ color: "#2C541D", fontSize: "15px" }}
                           />
                         </button>
+                        <button className="heart">
+                          <HeartOutlined />
+                        </button>
                         <img
                           src="	https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster6-1000x1000.jpg"
                           alt=""
@@ -159,6 +165,9 @@ function Shop() {
                             icon={faBagShopping}
                             style={{ color: "#2C541D", fontSize: "15px" }}
                           />
+                        </button>
+                        <button className="heart">
+                          <HeartOutlined />
                         </button>
                         <img
                           src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster4-1000x1000.jpg"
@@ -182,6 +191,9 @@ function Shop() {
                             style={{ color: "#2C541D", fontSize: "15px" }}
                           />
                         </button>
+                        <button className="heart">
+                          <HeartOutlined />
+                        </button>
                         <img
                           src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster5-1000x1000.jpg"
                           alt=""
@@ -203,6 +215,9 @@ function Shop() {
                             style={{ color: "#2C541D", fontSize: "15px" }}
                           />
                         </button>
+                        <button className="heart">
+                          <HeartOutlined />
+                        </button>
                         <img
                           src="	https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster6-1000x1000.jpg"
                           alt=""
@@ -223,6 +238,9 @@ function Shop() {
                             icon={faBagShopping}
                             style={{ color: "#2C541D", fontSize: "15px" }}
                           />
+                        </button>
+                        <button className="heart">
+                          <HeartOutlined />
                         </button>
                         <img
                           src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster4-1000x1000.jpg"
@@ -245,6 +263,9 @@ function Shop() {
                             style={{ color: "#2C541D", fontSize: "15px" }}
                           />
                         </button>
+                        <button className="heart">
+                          <HeartOutlined />
+                        </button>
                         <img
                           src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster5-1000x1000.jpg"
                           alt=""
@@ -266,6 +287,9 @@ function Shop() {
                             style={{ color: "#2C541D", fontSize: "15px" }}
                           />
                         </button>
+                        <button className="heart">
+                          <HeartOutlined />
+                        </button>
                         <img
                           src="	https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster6-1000x1000.jpg"
                           alt=""
@@ -286,6 +310,9 @@ function Shop() {
                             icon={faBagShopping}
                             style={{ color: "#2C541D", fontSize: "15px" }}
                           />
+                        </button>
+                        <button className="heart">
+                          <HeartOutlined />
                         </button>
                         <img
                           src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster4-1000x1000.jpg"

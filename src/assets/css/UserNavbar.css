@@ -6,6 +6,7 @@
   position: relative;
   z-index: 999;
 }
+
 .bigContainer .userNavbar {
   display: flex;
   justify-content: space-between;
@@ -15,6 +16,7 @@
   position: absolute;
   top: 0;
 }
+
 .bigContainer .userNavbar h1 a {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -23,6 +25,7 @@
   text-decoration: none;
   color: black;
 }
+
 .bigContainer .userNavbar ul {
   list-style: none;
   display: flex;
@@ -30,15 +33,18 @@
   align-items: center;
   margin: 0;
 }
+
 .bigContainer .userNavbar ul li {
   margin: 0;
   padding: 0;
   line-height: 100px;
   padding: 0 20px;
 }
+
 .bigContainer .userNavbar ul li :hover {
   color: #74a84a;
 }
+
 .bigContainer .userNavbar ul li a {
   text-decoration: none;
   color: #000000;
@@ -46,12 +52,15 @@
   font-weight: inherit;
   letter-spacing: 2px;
 }
+
 .bigContainer .userNavbar ul .bag {
   padding-right: 0;
 }
+
 .bigContainer .userNavbar ul .bag sup {
   background-color: black;
   color: white;
-  padding: 4px;
+  padding: 4px 9px;
   border-radius: 50%;
-}/*# sourceMappingURL=UserNavbar.css.map */
+}
+/*# sourceMappingURL=UserNavbar.css.map */

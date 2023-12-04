@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Postcard V1",
+      "category": "Postcard",
+      "description": "Sending a travel postcard to a loved one is truly a thoughtful gesture that can bring joy and inspiration. Inspiration can come in the form of taking a break from the normal routine, while being reminded of the more adventurous and exotic destinations around the world.",
+      "price": "$23.99",
+      "image": "https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/11/Postcard1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Postcard V2",
+      "category": "Postcard",
+      "description": "Sending a travel postcard to a loved one is truly a thoughtful gesture that can bring joy and inspiration. Inspiration can come in the form of taking a break from the normal routine, while being reminded of the more adventurous and exotic destinations around the world.",
+      "price": "$23.99",
+      "image": "https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/PostcardV2-min.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Postcard V3",
+      "category": "Postcard",
+      "description": "Sending a travel postcard to a loved one is truly a thoughtful gesture that can bring joy and inspiration. Inspiration can come in the form of taking a break from the normal routine, while being reminded of the more adventurous and exotic destinations around the world.",
+      "price": "$23.99",
+      "image": "https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/11/Postcard3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Postcard V4",
+      "category": "Postcard",
+      "description": "Sending a travel postcard to a loved one is truly a thoughtful gesture that can bring joy and inspiration. Inspiration can come in the form of taking a break from the normal routine, while being reminded of the more adventurous and exotic destinations around the world.",
+      "price": "$23.99",
+      "image": "https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Postcard-6-min.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Postcard V5",
+      "category": "Postcard",
+      "description": "Sending a travel postcard to a loved one is truly a thoughtful gesture that can bring joy and inspiration. Inspiration can come in the form of taking a break from the normal routine, while being reminded of the more adventurous and exotic destinations around the world.",
+      "price": "$23.99",
+      "image": "https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2021/08/PostcardV6.jpg"
+    }
+  ]
+}

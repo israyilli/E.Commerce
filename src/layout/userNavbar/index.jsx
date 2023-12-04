@@ -9,7 +9,6 @@ function UserNavbar() {
       <div className="bigContainer">
         <div className="userNavbar">
           <h1>
-            {" "}
             <Link to="/">EARTH STORE</Link>
           </h1>
           <div>
@@ -21,10 +20,13 @@ function UserNavbar() {
                 <Link to="/about">ABOUT</Link>
               </li>
               <li>
+                <Link to="/contact">CONTACT</Link>
+              </li>
+              <li>
                 <Link to="/shop">SHOP</Link>
               </li>
               <li>
-                <Link to="/contact">CONTACT</Link>
+                <Link to="/wishlist">WISHLIST</Link>
               </li>
               <li className="bag">
                 <button

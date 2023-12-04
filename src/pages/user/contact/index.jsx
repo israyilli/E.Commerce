@@ -47,7 +47,7 @@ function Contact() {
                   <img src={phone} alt="" />
                 </span>
                 <div>
-                  <span>Phone Number</span>
+                  <span>PHONE NUMBER</span>
                   <p className="Phone">202-555-0188</p>
                 </div>
               </li>

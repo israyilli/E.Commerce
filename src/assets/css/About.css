@@ -17,9 +17,11 @@
   justify-content: center;
   align-items: center;
 }
+
 .aboutImg div {
   text-align: center;
 }
+
 .aboutImg div h1 {
   font-size: 60px;
   letter-spacing: 7px;
@@ -35,29 +37,36 @@
   padding: 40px 40px 40px 40px;
   margin: 100px 0;
 }
+
 .ourMission .container {
   width: 1140px;
   margin: auto;
 }
+
 .ourMission .container .mission1 {
   display: flex;
   flex-direction: row;
 }
+
 .ourMission .container .mission1 .mountainImage3 img {
   width: 550px;
 }
+
 .ourMission .mission2 {
   display: flex;
   flex-direction: column;
-  padding: 100px;
+  padding: 40px 100px;
   font-family: "Roboto", sans-serif;
 }
+
 .ourMission .mission2 h1 {
   padding-bottom: 20px;
 }
+
 .ourMission .mission2 p {
   line-height: 1.7em;
 }
+
 .ourMission .mission2 .wish {
   padding-top: 20px;
 }
@@ -73,6 +82,7 @@
   background-position: center;
   background-size: cover;
 }
+
 .theGift h1 {
   font-size: 2.4117647059rem;
   font-weight: 500;
@@ -80,6 +90,7 @@
   padding-bottom: 15px;
   letter-spacing: 4.92px;
 }
+
 .theGift h5 {
   font-family: "Roboto", sans-serif;
   line-height: 1.7em;
@@ -87,6 +98,7 @@
   padding-bottom: 40px;
   font-family: "Roboto", sans-serif;
 }
+
 .theGift button {
   font-weight: 400;
   text-align: center;
@@ -97,4 +109,5 @@
   padding: 13px 20px;
   background-color: #74a84a;
   border: none;
-}/*# sourceMappingURL=About.css.map */
+}
+/*# sourceMappingURL=About.css.map */
