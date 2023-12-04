@@ -1,10 +1,11 @@
 import React from "react";
 import "../../../assets/style/Shop.scss";
 import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
 import { render } from "react-dom";
 import { HeartOutlined } from "@ant-design/icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Box from "@mui/material/Box";
+import Slider from "@mui/material/Slider";
 import {
   faQuoteLeft,
   faLock,
@@ -15,6 +16,12 @@ import {
 import Icon, { SearchOutlined } from "@ant-design/icons";
 
 function Shop() {
+  const [priceRange, setPriceRange] = React.useState([10, 30]);
+
+  const handlePriceChange = (event, newValue) => {
+    setPriceRange(newValue);
+  };
+
   return (
     <>
       <section className="shop">
@@ -34,7 +41,17 @@ function Shop() {
 
             <div className="filtering">
               <h3>Filter by Price</h3>
-              <input type="range" />
+
+              <Slider
+                getAriaLabel={() => "Price range"}
+                value={priceRange}
+                onChange={handlePriceChange}
+                valueLabelDisplay="auto"
+                valueLabelFormat={(value) => `$${value}`}
+                min={10}
+                max={30}
+              />
+
               <div className="minMax">
                 <span>$10</span>
                 <span>$30</span>

@@ -7,42 +7,104 @@
 .firstTable {
   margin: 150px 0 0 0;
 }
-
 .firstTable .container {
-  width: 1140px;
+  width: 1117px;
   margin: auto;
+}
+.firstTable .container .cartTable {
+  width: 100%;
+}
+.firstTable .container .cartTable table {
+  width: 1140px;
+  height: 250px;
+  border: 1px solid #d9d9d9;
+}
+.firstTable .container .cartTable table tr {
+  border: 1px solid #d9d9d9;
+  height: 40px;
+  margin-bottom: 20px;
+}
+.firstTable .container .cartTable table tr th {
+  background-color: #fafafa;
+}
+.firstTable .container .cartTable table tr th,
+.firstTable .container .cartTable table tr td {
+  padding-left: 20px;
+}
+.firstTable .container .cartTable table tr th .cancel,
+.firstTable .container .cartTable table tr td .cancel {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.firstTable .container .cartTable table tr th .cancel button,
+.firstTable .container .cartTable table tr td .cancel button {
+  background-color: transparent;
+  border: none;
+}
+.firstTable .container .cartTable table tr th .cancel button .CancelCart,
+.firstTable .container .cartTable table tr td .cancel button .CancelCart {
+  font-size: 30px;
+  color: #74a84a;
+}
+.firstTable .container .cartTable table tr th .imgWrapper,
+.firstTable .container .cartTable table tr td .imgWrapper {
+  margin: 15px 0;
+  width: 70px;
+  height: 70px;
+}
+.firstTable .container .cartTable table tr th .imgWrapper img,
+.firstTable .container .cartTable table tr td .imgWrapper img {
+  width: 100%;
+  height: 100%;
+}
+.firstTable .container .cartTable .buttons {
+  border: 1px solid #d9d9d9;
+  height: 70px;
+  width: 1140px;
+}
+.firstTable .container .cartTable .buttons .tableInpBtn {
+  width: 180px;
+  height: 30px;
+  gap: 10px;
+}
+.firstTable .container .cartTable .buttons .tableInpBtn div {
+  width: 180px;
+  height: 30px;
+  gap: 10px;
+}
+.firstTable .container .cartTable .buttons .tableInpBtn div input {
+  border: 1px solid #d9d9d9;
+  padding: 4px;
+  margin-right: 15px;
 }
 
 .secondTable {
   padding: 50px;
 }
-
 .secondTable .container {
-  width: 1140px;
+  width: 1117px;
   margin: auto;
   display: flex;
   align-items: start;
   justify-content: end;
 }
-
 .secondTable .container .subTotal {
   width: 590px;
   height: 300px;
   border: 1px solid #d9d9d9;
 }
-
 .secondTable .container .subTotal .cartTotals h5 {
   padding-left: 20px;
   display: flex;
   margin-top: 10px;
   align-items: center;
 }
-
 .secondTable .container .subTotal p {
   margin: 20px;
   padding-left: 20px;
 }
-
 .secondTable .container .subTotal button {
   display: flex;
   justify-content: center;
@@ -57,24 +119,24 @@
   margin-left: 30px;
 }
 
+.cartTable {
+  width: 100%;
+}
 .cartTable .tableInpBtn {
   display: flex;
   padding: 10px 30px;
   gap: 30px;
 }
-
 .cartTable .tableInpBtn .Inp {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 10px;
 }
-
 .cartTable .tableInpBtn button {
   background-color: #74a84a;
   color: #fbfbfb;
   width: 200px;
   height: 50px;
   border: none;
-}
-/*# sourceMappingURL=Basket.css.map */
+}/*# sourceMappingURL=Basket.css.map */

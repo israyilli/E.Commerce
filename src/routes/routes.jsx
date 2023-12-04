@@ -8,8 +8,13 @@ import Basket from "../pages/user/basket";
 import Detail from "../pages/user/detail";
 import Home from "../pages/user/home";
 import UserRoot from "../pages/user/userRoot";
-import userNavbar from "../layout/userNavbar";
 import Checkout from "../pages/user/checkout";
+import Dashboard from "../pages/admin/dashboard";
+import Users from "../pages/admin/users";
+import Products from "../pages/admin/products";
+import AddUsers from "../pages/admin/addUsers";
+import AddProducts from "../pages/admin/addProducts";
+import AdminHome from "../pages/admin/adminHome";
 export const routes = [
   {
     path: "/",
@@ -59,6 +64,32 @@ export const routes = [
       {
         path: "checkout",
         element: <Checkout />,
+      },
+    ],
+  },
+  {
+    path: "/admin",
+    element: <AdminHome />,
+    children: [
+      {
+        path: "users",
+        element: <Users />,
+      },
+      {
+        path: "products",
+        element: <Products />,
+      },
+      {
+        path: "/admin/addUsers",
+        element: <AddUsers />,
+      },
+      {
+        path: "/admin/addProducts",
+        element: <AddProducts />,
+      },
+      {
+        path: "/admin/dashboard",
+        element: <Dashboard />,
       },
     ],
   },
