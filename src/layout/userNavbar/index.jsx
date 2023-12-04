@@ -8,9 +8,7 @@ function UserNavbar() {
     <>
       <div className="bigContainer">
         <div className="userNavbar">
-          <h1>
-            <Link to="/">EARTH STORE</Link>
-          </h1>
+          <h1>       <Link to="/">EARTH STORE</Link></h1>
           <div>
             <ul>
               <li>
@@ -26,21 +24,54 @@ function UserNavbar() {
                 <Link to="/contact">CONTACT</Link>
               </li>
               <li className="bag">
-                <Link to="/basket">
+                <button
+                  className="btn btn-primary"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasRight"
+                  aria-controls="offcanvasRight"
+                  style={{ background: "transparent", border: "none" }}
+                >
+                  <div
+                    class="offcanvas offcanvas-end"
+                    tabindex="-1"
+                    id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel"
+                  >
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasRightLabel">
+                        Shopping Cart
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <button>
+                        <Link to="/basket">Basket</Link>
+                      </button>
+                      <button>
+                        <Link to="/checkout">Checkout</Link>
+                      </button>
+                    </div>
+                  </div>
                   <span>
                     <FontAwesomeIcon
                       icon={faBagShopping}
-                      style={{ color: "black", fontSize: "20px" }}
+                      style={{ color: "#2C541D", fontSize: "20px" }}
                     />
                   </span>
-                </Link>
+                </button>
                 <sup>0</sup>
               </li>
               <li>
                 <Link to="/login">
                   <FontAwesomeIcon
                     icon={faUser}
-                    style={{ color: "black", fontSize: "20px" }}
+                    style={{ color: "#2C541D", fontSize: "20px" }}
                   />
                 </Link>
               </li>

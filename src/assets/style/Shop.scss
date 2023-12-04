@@ -222,9 +222,11 @@
 
                     .imgWrapper {
                         width: 252px;
+                        
                         height: 252px;
                         margin-bottom: 13.6px;
                         position: relative;
+
 
                         button {
                             position: absolute;
@@ -250,6 +252,8 @@
                         h6 {
                             font-family: 'Roboto', sans-serif;
                             color: grey;
+                    border: none;
+
                             margin: 0 0 7px 0;
                         }
 

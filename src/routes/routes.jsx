@@ -9,6 +9,7 @@ import Detail from "../pages/user/detail";
 import Home from "../pages/user/home";
 import UserRoot from "../pages/user/userRoot";
 import userNavbar from "../layout/userNavbar";
+import Checkout from "../pages/user/checkout";
 export const routes = [
   {
     path: "/",
@@ -54,6 +55,10 @@ export const routes = [
       {
         path: "basket",
         element: <Basket />,
+      },
+      {
+        path: "checkout",
+        element: <Checkout />,
       },
     ],
   },
