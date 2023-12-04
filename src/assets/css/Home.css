@@ -13,6 +13,9 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .mountainImg div {
   display: flex;
@@ -23,7 +26,7 @@
 .mountainImg div h1 {
   font-size: 60px;
   letter-spacing: 7px;
-  color: #2C541D;
+  color: #2c541d;
   margin: 0;
   font-family: "Jost", sans-serif;
 }
@@ -37,7 +40,7 @@
   font-family: "Jost", sans-serif;
 }
 .mountainImg div button {
-  background-color: #74A84A;
+  background-color: #74a84a;
   font-size: 16px;
   padding: 16px 40px;
   font-weight: 400;
@@ -196,7 +199,7 @@
 }
 .prefer .container .head span {
   padding: 12px;
-  background-color: #2C541D;
+  background-color: #2c541d;
   border-radius: 50%;
   margin-right: 15px;
 }

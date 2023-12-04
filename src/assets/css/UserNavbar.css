@@ -1,18 +1,19 @@
 .bigContainer {
-  width: 1180px;
-  margin: auto;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background: transparent;
-  position: fixed;
+  justify-content: center;
+  position: relative;
   z-index: 999;
 }
 .bigContainer .userNavbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 1180px;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
 }
 .bigContainer .userNavbar h1 a {
   font-family: "Roboto", sans-serif;

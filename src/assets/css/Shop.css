@@ -1,6 +1,6 @@
 .shop {
   width: 100%;
-  padding: 4em 0 0 0;
+  padding: 7em 0 0 0;
 }
 .shop .container {
   width: 1140px;
@@ -55,7 +55,7 @@
   padding-bottom: 50px;
 }
 .shop .container .left .categories h4 {
-  color: #9CA84A;
+  color: #9ca84a;
   font-size: 1.2em;
   margin-bottom: 20px;
 }
@@ -65,7 +65,7 @@
   list-style: none;
 }
 .shop .container .left .categories ul li {
-  color: #9CA84A;
+  color: #9ca84a;
   padding-left: 10px;
   padding-bottom: 8px;
   font-size: 100%;
@@ -117,7 +117,7 @@
   font-weight: 500;
   font-size: 100%;
   font-style: inherit;
-  color: #9CA84A;
+  color: #9ca84a;
   padding-bottom: 10px;
 }
 .shop .container .left .recentlyViewed .viewed ul li .articles span {
@@ -171,6 +171,9 @@
   font-family: "Roboto", sans-serif;
   color: #586073;
 }
+.shop .container .right .allProducts .card {
+  border: none;
+}
 .shop .container .right .allProducts .card .imgWrapper:hover button {
   display: block;
 }
@@ -198,6 +201,7 @@
 .shop .container .right .allProducts .card .article h6 {
   font-family: "Roboto", sans-serif;
   color: grey;
+  border: none;
   margin: 0 0 7px 0;
 }
 .shop .container .right .allProducts .card .article h4 {

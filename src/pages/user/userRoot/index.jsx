@@ -8,7 +8,7 @@ function UserRoot() {
     <div>
       <UserNavbar />
       <Outlet />
-      <UserFooter/>
+      <UserFooter />
     </div>
   );
 }

@@ -1,11 +1,17 @@
 import React from "react";
 import "../../../assets/style/Home.scss";
-import UserFooter from "../../../layout/userFooter"
+import UserFooter from "../../../layout/userFooter";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import { render } from "react-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faQuoteLeft,faLock,faBox,faHand,faBagShopping } from "@fortawesome/free-solid-svg-icons";
+import {
+  faQuoteLeft,
+  faLock,
+  faBox,
+  faHand,
+  faBagShopping,
+} from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
   return (
@@ -22,11 +28,14 @@ function Home() {
         <div className="container">
           <Box sx={{ flexGrow: 1 }}>
             <Grid container columns={{ xs: 4, md: 12 }} spacing={3}>
-              <Grid item xs={4} >
+              <Grid item xs={4}>
                 <div className="card1">
                   <div className="imgWrapper">
                     <button>
-                    <FontAwesomeIcon icon={faBagShopping}  style={{ color: "#2C541D" ,fontSize:"15px"}} />
+                      <FontAwesomeIcon
+                        icon={faBagShopping}
+                        style={{ color: "#2C541D", fontSize: "15px" }}
+                      />
                     </button>
                     <img
                       src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster5-1000x1000.jpg"
@@ -43,8 +52,11 @@ function Home() {
               <Grid item xs={4}>
                 <div className="card2">
                   <div className="imgWrapper">
-                  <button>
-                    <FontAwesomeIcon icon={faBagShopping}  style={{ color: "#2C541D" ,fontSize:"15px"}} />
+                    <button>
+                      <FontAwesomeIcon
+                        icon={faBagShopping}
+                        style={{ color: "#2C541D", fontSize: "15px" }}
+                      />
                     </button>
 
                     <img
@@ -62,10 +74,13 @@ function Home() {
               <Grid item xs={4}>
                 <div className="card3">
                   <div className="imgWrapper">
-                  <button>
-                    <FontAwesomeIcon icon={faBagShopping}  style={{ color: "#2C541D" ,fontSize:"15px"}} />
+                    <button>
+                      <FontAwesomeIcon
+                        icon={faBagShopping}
+                        style={{ color: "#2C541D", fontSize: "15px" }}
+                      />
                     </button>
-                    
+
                     <img
                       src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster4-1000x1000.jpg"
                       alt=""
@@ -90,10 +105,14 @@ function Home() {
           <h1>What Our Customers Say</h1>
 
           <Box sx={{ flexGrow: 1 }}>
-            <Grid container columns={{ xs: 4, md: 12 }}  spacing={9}>
+            <Grid container columns={{ xs: 4, md: 12 }} spacing={9}>
               <Grid item xs={4}>
                 <div className="box">
-                  <FontAwesomeIcon icon={faQuoteLeft} size={"2x"} style={{ color: "#2C541D" }} />
+                  <FontAwesomeIcon
+                    icon={faQuoteLeft}
+                    size={"2x"}
+                    style={{ color: "#2C541D" }}
+                  />
                   <p>
                     Fast shipping and excellent customer service. The product
                     was even better than expected. I will definitely be a
@@ -110,7 +129,11 @@ function Home() {
               </Grid>
               <Grid item xs={4}>
                 <div className="box">
-                  <FontAwesomeIcon icon={faQuoteLeft} size={"2x"}  style={{ color: "#2C541D" }} />
+                  <FontAwesomeIcon
+                    icon={faQuoteLeft}
+                    size={"2x"}
+                    style={{ color: "#2C541D" }}
+                  />
                   <p>
                     Great user experience on your website. I found exactly what
                     I was looking for at a great price. I will definitely be
@@ -127,7 +150,11 @@ function Home() {
               </Grid>
               <Grid item xs={4}>
                 <div className="box">
-                  <FontAwesomeIcon icon={faQuoteLeft} size={"2x"}  style={{ color: "#2C541D" }} />
+                  <FontAwesomeIcon
+                    icon={faQuoteLeft}
+                    size={"2x"}
+                    style={{ color: "#2C541D" }}
+                  />
                   <p>
                     Thank you for the excellent shopping experience. It arrived
                     quickly and was exactly as described. I will definitely be
@@ -156,21 +183,33 @@ function Home() {
       <section className="prefer">
         <div className="container">
           <Box sx={{ flexGrow: 1 }}>
-            <Grid container columns={{ xs: 4, md: 12 }}  spacing={3}>
+            <Grid container columns={{ xs: 4, md: 12 }} spacing={3}>
               <Grid item xs={4}>
-
                 <div className="head securePayment">
-               <span> <FontAwesomeIcon icon={faLock} size={"1x"} style={{ color: "white" }} /></span>
+                  <span>
+                    {" "}
+                    <FontAwesomeIcon
+                      icon={faLock}
+                      size={"1x"}
+                      style={{ color: "white" }}
+                    />
+                  </span>
                   <div className="article">
                     <h4> SECURE PAYMENT</h4>
                     <h3>All our payments our SSL secured</h3>
                   </div>
                 </div>
-
               </Grid>
               <Grid item xs={4}>
                 <div className="head delivered">
-                <span> <FontAwesomeIcon icon={faBox} size={"1x"} style={{ color: "white" }} /></span>
+                  <span>
+                    {" "}
+                    <FontAwesomeIcon
+                      icon={faBox}
+                      size={"1x"}
+                      style={{ color: "white" }}
+                    />
+                  </span>
                   <div className="article">
                     <h4> DELIVERED WITH CARE</h4>
                     <h3>Super fast shipping to your door</h3>
@@ -179,7 +218,14 @@ function Home() {
               </Grid>
               <Grid item xs={4}>
                 <div className="head excellent">
-                <span> <FontAwesomeIcon icon={faHand} size={"1x"} style={{ color: "white" }} /></span>
+                  <span>
+                    {" "}
+                    <FontAwesomeIcon
+                      icon={faHand}
+                      size={"1x"}
+                      style={{ color: "white" }}
+                    />
+                  </span>
                   <div className="article">
                     <h4> EXCELLENT SERVICE</h4>
                     <h3>Live chat and phone support</h3>
@@ -191,7 +237,6 @@ function Home() {
         </div>
       </section>
       <hr />
-      
     </>
   );
 }

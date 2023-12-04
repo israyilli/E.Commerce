@@ -8,7 +8,10 @@ function UserNavbar() {
     <>
       <div className="bigContainer">
         <div className="userNavbar">
-          <h1>       <Link to="/">EARTH STORE</Link></h1>
+          <h1>
+            {" "}
+            <Link to="/">EARTH STORE</Link>
+          </h1>
           <div>
             <ul>
               <li>

@@ -1,9 +1,9 @@
 import React from "react";
-import "../../assets/style/UserFooter.scss"
+import "../../assets/style/UserFooter.scss";
 function UserFooter() {
   return (
     <section className="footer">
-      <div className="bigContainer">
+      <div className="bigcontainer">
         <ul>
           <li>Home</li>
           <li>About</li>
