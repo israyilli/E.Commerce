@@ -2,8 +2,15 @@ import React from "react";
 import "./../../../assets/style/Basket.scss";
 // import { IconName } from "react-icons/ai";
 import { TiDeleteOutline } from "react-icons/ti";
+import { useDispatch } from "react-redux";
+import { handleMinus,handlePlus } from "../../../Config/BasketSlice";
 
 function Basket() {
+  const dispatch = useDispatch();
+
+  const MyBasket = JSON.parse(localStorage.getItem("basket")) || [];
+  console.log(MyBasket);
+  console.log(MyBasket);
   return (
     <>
       <hr />
@@ -21,74 +28,50 @@ function Basket() {
                 <th>Subtotal</th>
               </tr>
 
-              <tr>
-                <td>
-                  <div className="cancel">
-                    <button>
-                      {" "}
-                      <TiDeleteOutline className="CancelCart" />
-                    </button>
-                  </div>
-                </td>
-                <td>
-                  <div className="imgWrapper">
-                    <img
-                      src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster4-1000x1000.jpg"
-                      alt=""
-                    />
-                  </div>
-                </td>
-                <td>Smith</td>
-                <td>50</td>
-                <td>50</td>
-                <td>$200</td>
-              </tr>
-
-              <tr>
-                <td>
-                  <div className="cancel">
-                    <button>
-                      {" "}
-                      <TiDeleteOutline className="CancelCart" />
-                    </button>
-                  </div>
-                </td>
-                <td>
-                  <div className="imgWrapper">
-                    <img
-                      src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster4-1000x1000.jpg"
-                      alt=""
-                    />
-                  </div>
-                </td>
-                <td>Smith</td>
-                <td>50</td>
-                <td>50</td>
-                <td>$200</td>
-              </tr>
-
-              <tr>
-                <td>
-                  <div className="cancel">
-                    <button>
-                      {" "}
-                      <TiDeleteOutline className="CancelCart" />
-                    </button>
-                  </div>
-                </td>
-                <td>
-                  <div className="imgWrapper">
-                    <img
-                      src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster4-1000x1000.jpg"
-                      alt=""
-                    />
-                  </div>
-                </td>
-                <td>Smith</td>
-                <td>50</td>
-                <td>50</td>
-                <td>$200</td>
-              </tr>
+              {MyBasket &&
+                MyBasket.map((x) => (
+                  <tr>
+                    <td>
+                      <div className="cancel">
+                        <button>
+                          {" "}
+                          <TiDeleteOutline className="CancelCart" />
+                        </button>
+                      </div>
+                    </td>
+                    <td>
+                      <div className="imgWrapper">
+                        <img src={x.products.image} alt="" />
+                      </div>
+                    </td>
+                    <td>{x.products.name}</td>
+                    <td>{x.products.price}</td>
+                    <td>
+                      <div className="quantity">
+                        <button
+                          className="minus"
+                          onClick={() => {
+                            dispatch(handleMinus(x));
+                          }}
+                        >
+                          -
+                        </button>
+                        <span> {x.count}</span>
+                        <button
+                          className="plus"
+                          onClick={() => {
+                            console.log("Before dispatching Plus");
+                            dispatch(handlePlus(x));
+                            console.log("After dispatching Plus");
+                          }}
+                        >
+                          +
+                        </button>
+                      </div>
+                    </td>
+                    <td>{x.products.price * x.count}</td>
+                  </tr>
+                ))}
             </table>
 
             <div className="buttons">

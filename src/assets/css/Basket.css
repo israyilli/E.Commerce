@@ -31,6 +31,37 @@
 .firstTable .container .cartTable table tr td {
   padding-left: 20px;
 }
+.firstTable .container .cartTable table tr th .quantity,
+.firstTable .container .cartTable table tr td .quantity {
+  display: flex;
+  margin-right: 17px;
+}
+.firstTable .container .cartTable table tr th .quantity .minus,
+.firstTable .container .cartTable table tr td .quantity .minus {
+  padding: 7px 18px;
+  background-color: transparent;
+  border: 1px solid rgb(233, 225, 225);
+  font-size: 30px;
+  border-right: none;
+}
+.firstTable .container .cartTable table tr th .quantity .plus,
+.firstTable .container .cartTable table tr td .quantity .plus {
+  padding: 11px 17px;
+  background-color: transparent;
+  border: 1px solid rgb(233, 225, 225);
+  font-size: 30px;
+}
+.firstTable .container .cartTable table tr th .quantity span,
+.firstTable .container .cartTable table tr td .quantity span {
+  border: 1px solid rgb(233, 225, 225);
+  padding: 9px 20px;
+  margin: 0;
+  font-size: 20px;
+  border-right: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .firstTable .container .cartTable table tr th .cancel,
 .firstTable .container .cartTable table tr td .cancel {
   width: 100%;

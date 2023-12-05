@@ -21,7 +21,7 @@ function Checkout() {
                 <div className="bil">
                   <h4>Billing details</h4>
                 </div>
-                <hr />
+                <hr style={{ width: "670px" }} />
                 <div className="names">
                   <div className="name">
                     <label htmlFor="">First Name</label> <br />
@@ -89,13 +89,15 @@ function Checkout() {
                   </div>
                 </div>
               </div>
-              <div className="right">
+              <div className="rightInp">
                 <div className="mains">
-                  <h3>Your order</h3>
-                  <table>
+                  <h5>
+                    <b>Your order</b>
+                  </h5>
+                  {/* <table>
                     <thead>
                       <tr>
-                        <th>Produc</th>
+                        <th>Product</th>
                         <th>Subtotal</th>
                       </tr>
                     </thead>
@@ -119,7 +121,11 @@ function Checkout() {
                         </td>
                       </tr>
                     </tfoot>
-                  </table>
+                  </table> */}
+                  <div>
+                    <div></div>
+                    <div></div>
+                  </div>
                   <div className="sorry">
                     <div className="text">
                       <p>
@@ -129,7 +135,7 @@ function Checkout() {
                       </p>
                     </div>
                   </div>
-                  <button>PLACE ORDER</button>
+                  <button className="placeOrder">PLACE ORDER</button>
                 </div>
               </div>
             </div>

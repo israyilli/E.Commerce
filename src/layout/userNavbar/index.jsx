@@ -1,9 +1,28 @@
 import React from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../../assets/style/userNavbar.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBagShopping, faUser } from "@fortawesome/free-solid-svg-icons";
+import { useSelector } from "react-redux";
+
 function UserNavbar() {
+
+// let result=0
+// useEffect(() => {
+  const MyWishlist = useSelector((state) => state.wishlist.wishlist);
+  console.log(MyWishlist);
+  
+  // Calculate the quantity
+  const quantity = MyWishlist ? MyWishlist.length : 0;
+  console.log(quantity);
+// result=quantity
+// }, [JSON.parse(localStorage.getItem("wishlist"))])
+
+
+
+ 
+  
   return (
     <>
       <div className="bigContainer">
@@ -70,7 +89,7 @@ function UserNavbar() {
                     />
                   </span>
                 </button>
-                <sup>0</sup>
+                <sup>{quantity}</sup>
               </li>
               <li>
                 <Link to="/login">

@@ -3,20 +3,43 @@ import "../../../assets/style/Login.scss";
 
 import * as Yup from "yup";
 import { Formik, Field, Form } from "formik";
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import axios from "axios";
 
-const Login = Yup.object().shape({
-  username: Yup.string().required("Please entered username"),
+import useHistory, { Link } from "use-history";
+
+
+
+
+const LoginSchema = Yup.object().shape({
+  username: Yup.string().required("Please enter a username"),
   password: Yup.string()
-    .required("Please entered the Correct password!")
+    .required("Please enter the correct password!")
     .matches(
       /^(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}$/,
-      "Please entered the Correct password!"
+      "Please enter the correct password!"
     ),
 });
 
-function index() {
+function Index() {
+  const [error, setError] = useState(null);
+  const history = useHistory();
+
+  const submitHandler = async (values) => {
+    try {
+      const response = await axios.post("http://localhost:3001/users/login", {
+        username: values.username,
+        password: values.password,
+      });
+
+      console.log("Login successful", response.data);
+      history.push("/home"); 
+    } catch (err) {
+      console.error("Login failed", err);
+      setError("Invalid username or password");
+    }
+  };
+
   return (
     <div className="login">
       <title>Login Page</title>
@@ -32,12 +55,8 @@ function index() {
                   username: "",
                   password: "",
                 }}
-                validateOnBlur={false}
-                validateOnChange={false}
-                validationSchema={Login}
-                onSubmit={(values) => {
-                  console.log(values);
-                }}
+                validationSchema={LoginSchema}
+                onSubmit={submitHandler}
               >
                 {({ errors, touched }) => (
                   <Form>
@@ -95,6 +114,11 @@ function index() {
                         {errors.password}
                       </div>
                     )}
+                    {error && (
+                      <div style={{ color: "red", marginTop: "-20px" }}>
+                        {error}
+                      </div>
+                    )}
                     <button type="submit">Sign In</button>
                   </Form>
                 )}
@@ -110,4 +134,4 @@ function index() {
   );
 }
 
-export default index;
+export default Index;

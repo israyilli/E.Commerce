@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../../../assets/style/Home.scss";
 import UserFooter from "../../../layout/userFooter";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import { render } from "react-dom";
+import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faQuoteLeft,
@@ -13,7 +14,21 @@ import {
   faBagShopping,
 } from "@fortawesome/free-solid-svg-icons";
 import { HeartOutlined } from "@ant-design/icons";
+import Products from "../../admin/products";
+
 function Home() {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    axios.get("http://localhost:3000/products").then((res) => {
+      const firstThreeProducts = res.data.slice(0, 3);
+      setProducts(firstThreeProducts);
+
+      console.log(
+        firstThreeProducts
+      )
+    });
+  }, []);
+
   return (
     <>
       <section className="mountainImg">
@@ -28,82 +43,31 @@ function Home() {
         <div className="container">
           <Box sx={{ flexGrow: 1 }}>
             <Grid container columns={{ xs: 4, md: 12 }} spacing={3}>
-              <Grid item xs={4}>
-                <div className="card1">
-                  <div className="imgWrapper">
-                    <button>
-                      <FontAwesomeIcon
-                        icon={faBagShopping}
-                        style={{ color: "#2C541D", fontSize: "15px" }}
-                      />
-                    </button>
+              {products.map((x) => (
+                <Grid item xs={4} key={x.id}>
+                  <div className="card1">
+                    <div className="imgWrapper">
+                      <button>
+                        <FontAwesomeIcon
+                          icon={faBagShopping}
+                          style={{ color: "#2C541D", fontSize: "15px" }}
+                        />
+                      </button>
 
-                    <button className="heart">
-                      <HeartOutlined />
-                    </button>
+                      <button className="heart">
+                        <HeartOutlined />
+                      </button>
 
-                    <img
-                      src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster5-1000x1000.jpg"
-                      alt=""
-                    />
+                      <img src={x.image} alt="" />
+                    </div>
+                    <div className="article">
+                      <h6 className="posters">{x.category}</h6>
+                      <h4>{x.name}</h4>
+                      <h5>${x.price}</h5>
+                    </div>
                   </div>
-                  <div className="article">
-                    <h6 className="posters">Posters</h6>
-                    <h4>Poster V1</h4>
-                    <h5>$23.99</h5>
-                  </div>
-                </div>
-              </Grid>
-              <Grid item xs={4}>
-                <div className="card2">
-                  <div className="imgWrapper">
-                    <button>
-                      <FontAwesomeIcon
-                        icon={faBagShopping}
-                        style={{ color: "#2C541D", fontSize: "15px" }}
-                      />
-                    </button>
-                    <button className="heart">
-                      <HeartOutlined />
-                    </button>
-
-                    <img
-                      src="	https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster6-1000x1000.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="article">
-                    <h6 className="posters">Posters</h6>
-                    <h4>Poster V1</h4>
-                    <h5>$23.99</h5>
-                  </div>
-                </div>
-              </Grid>
-              <Grid item xs={4}>
-                <div className="card3">
-                  <div className="imgWrapper">
-                    <button>
-                      <FontAwesomeIcon
-                        icon={faBagShopping}
-                        style={{ color: "#2C541D", fontSize: "15px" }}
-                      />
-                    </button>
-                    <button className="heart">
-                      <HeartOutlined />
-                    </button>
-
-                    <img
-                      src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster4-1000x1000.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="article">
-                    <h6 className="posters">Posters</h6>
-                    <h4>Poster V1</h4>
-                    <h5>$23.99</h5>
-                  </div>
-                </div>
-              </Grid>
+                </Grid>
+              ))}
             </Grid>
           </Box>
         </div>

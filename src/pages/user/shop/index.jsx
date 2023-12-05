@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../../../assets/style/Shop.scss";
 import Grid from "@mui/material/Grid";
 import { render } from "react-dom";
 import { HeartOutlined } from "@ant-design/icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Box from "@mui/material/Box";
+import axios from "axios";
 import Slider from "@mui/material/Slider";
+import { useDispatch, useSelector } from "react-redux";
 import {
   faQuoteLeft,
   faLock,
@@ -15,13 +17,32 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Icon, { SearchOutlined } from "@ant-design/icons";
 
+import { handleBasket } from "../../../Config/BasketSlice";
+import { handleWishlist } from "../../../Config/WishlistSlice";
 function Shop() {
+  const [products, setProducts] = useState([]);
   const [priceRange, setPriceRange] = React.useState([10, 30]);
+  const dispatch = useDispatch();
+  const MyBasket = useSelector((state) => state.basket.basket);
+  const MyWishlist = useSelector((state) => state.wishlist.wishlist);
+  console.log(MyBasket);
 
   const handlePriceChange = (event, newValue) => {
     setPriceRange(newValue);
   };
+  useEffect(() => {
+    axios.get("http://localhost:3000/products").then((res) => {
+      setProducts(res.data);
+    });
+  }, []);
 
+  const handleBuy = (element) => {
+    dispatch(handleBasket(element));
+  };
+
+  const handleWish = (element) => {
+    dispatch(handleWishlist(element));
+  };
   return (
     <>
       <section className="shop">
@@ -124,225 +145,32 @@ function Shop() {
             <div className="allProducts">
               <Box sx={{ flexGrow: 1 }}>
                 <Grid container columns={{ xs: 4, md: 12 }} spacing={3}>
-                  <Grid item xs={4}>
-                    <div className="card">
-                      <div className="imgWrapper">
-                        <button>
-                          <FontAwesomeIcon
-                            icon={faBagShopping}
-                            style={{ color: "#2C541D", fontSize: "15px" }}
+                  {products.map((x) => (
+                    <Grid item xs={4} key={x.id}>
+                      <div className="card">
+                        <div className="imgWrapper">
+                          <button onClick={() => handleBuy(x)}>
+                            <FontAwesomeIcon
+                              icon={faBagShopping}
+                              style={{ color: "#2C541D", fontSize: "15px" }}
+                            />
+                          </button>
+                          <button className="heart" onClick={()=> handleWish(x)}>
+                            <HeartOutlined />
+                          </button>
+                          <img
+                            src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster5-1000x1000.jpg"
+                            alt=""
                           />
-                        </button>
-                        <button className="heart">
-                          <HeartOutlined />
-                        </button>
-                        <img
-                          src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster5-1000x1000.jpg"
-                          alt=""
-                        />
+                        </div>
+                        <div className="article">
+                          <h6 className="posters">{x.category}</h6>
+                          <h4>{x.name}</h4>
+                          <h5>${x.price}</h5>
+                        </div>
                       </div>
-                      <div className="article">
-                        <h6 className="posters">Posters</h6>
-                        <h4>Poster V1</h4>
-                        <h5>$23.99</h5>
-                      </div>
-                    </div>
-                  </Grid>
-
-                  <Grid item xs={4}>
-                    <div className="card">
-                      <div className="imgWrapper">
-                        <button>
-                          <FontAwesomeIcon
-                            icon={faBagShopping}
-                            style={{ color: "#2C541D", fontSize: "15px" }}
-                          />
-                        </button>
-                        <button className="heart">
-                          <HeartOutlined />
-                        </button>
-                        <img
-                          src="	https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster6-1000x1000.jpg"
-                          alt=""
-                        />
-                      </div>
-                      <div className="article">
-                        <h6 className="posters">Posters</h6>
-                        <h4>Poster V1</h4>
-                        <h5>$23.99</h5>
-                      </div>
-                    </div>
-                  </Grid>
-
-                  <Grid item xs={4}>
-                    <div className="card">
-                      <div className="imgWrapper">
-                        <button>
-                          <FontAwesomeIcon
-                            icon={faBagShopping}
-                            style={{ color: "#2C541D", fontSize: "15px" }}
-                          />
-                        </button>
-                        <button className="heart">
-                          <HeartOutlined />
-                        </button>
-                        <img
-                          src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster4-1000x1000.jpg"
-                          alt=""
-                        />
-                      </div>
-                      <div className="article">
-                        <h6 className="posters">Posters</h6>
-                        <h4>Poster V1</h4>
-                        <h5>$23.99</h5>
-                      </div>
-                    </div>
-                  </Grid>
-
-                  <Grid item xs={4}>
-                    <div className="card">
-                      <div className="imgWrapper">
-                        <button>
-                          <FontAwesomeIcon
-                            icon={faBagShopping}
-                            style={{ color: "#2C541D", fontSize: "15px" }}
-                          />
-                        </button>
-                        <button className="heart">
-                          <HeartOutlined />
-                        </button>
-                        <img
-                          src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster5-1000x1000.jpg"
-                          alt=""
-                        />
-                      </div>
-                      <div className="article">
-                        <h6 className="posters">Posters</h6>
-                        <h4>Poster V1</h4>
-                        <h5>$23.99</h5>
-                      </div>
-                    </div>
-                  </Grid>
-                  <Grid item xs={4}>
-                    <div className="card">
-                      <div className="imgWrapper">
-                        <button>
-                          <FontAwesomeIcon
-                            icon={faBagShopping}
-                            style={{ color: "#2C541D", fontSize: "15px" }}
-                          />
-                        </button>
-                        <button className="heart">
-                          <HeartOutlined />
-                        </button>
-                        <img
-                          src="	https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster6-1000x1000.jpg"
-                          alt=""
-                        />
-                      </div>
-                      <div className="article">
-                        <h6 className="posters">Posters</h6>
-                        <h4>Poster V1</h4>
-                        <h5>$23.99</h5>
-                      </div>
-                    </div>
-                  </Grid>
-                  <Grid item xs={4}>
-                    <div className="card">
-                      <div className="imgWrapper">
-                        <button>
-                          <FontAwesomeIcon
-                            icon={faBagShopping}
-                            style={{ color: "#2C541D", fontSize: "15px" }}
-                          />
-                        </button>
-                        <button className="heart">
-                          <HeartOutlined />
-                        </button>
-                        <img
-                          src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster4-1000x1000.jpg"
-                          alt=""
-                        />
-                      </div>
-                      <div className="article">
-                        <h6 className="posters">Posters</h6>
-                        <h4>Poster V1</h4>
-                        <h5>$23.99</h5>
-                      </div>
-                    </div>
-                  </Grid>
-                  <Grid item xs={4}>
-                    <div className="card">
-                      <div className="imgWrapper">
-                        <button>
-                          <FontAwesomeIcon
-                            icon={faBagShopping}
-                            style={{ color: "#2C541D", fontSize: "15px" }}
-                          />
-                        </button>
-                        <button className="heart">
-                          <HeartOutlined />
-                        </button>
-                        <img
-                          src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster5-1000x1000.jpg"
-                          alt=""
-                        />
-                      </div>
-                      <div className="article">
-                        <h6 className="posters">Posters</h6>
-                        <h4>Poster V1</h4>
-                        <h5>$23.99</h5>
-                      </div>
-                    </div>
-                  </Grid>
-                  <Grid item xs={4}>
-                    <div className="card">
-                      <div className="imgWrapper">
-                        <button>
-                          <FontAwesomeIcon
-                            icon={faBagShopping}
-                            style={{ color: "#2C541D", fontSize: "15px" }}
-                          />
-                        </button>
-                        <button className="heart">
-                          <HeartOutlined />
-                        </button>
-                        <img
-                          src="	https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster6-1000x1000.jpg"
-                          alt=""
-                        />
-                      </div>
-                      <div className="article">
-                        <h6 className="posters">Posters</h6>
-                        <h4>Poster V1</h4>
-                        <h5>$23.99</h5>
-                      </div>
-                    </div>
-                  </Grid>
-                  <Grid item xs={4}>
-                    <div className="card">
-                      <div className="imgWrapper">
-                        <button>
-                          <FontAwesomeIcon
-                            icon={faBagShopping}
-                            style={{ color: "#2C541D", fontSize: "15px" }}
-                          />
-                        </button>
-                        <button className="heart">
-                          <HeartOutlined />
-                        </button>
-                        <img
-                          src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster4-1000x1000.jpg"
-                          alt=""
-                        />
-                      </div>
-                      <div className="article">
-                        <h6 className="posters">Posters</h6>
-                        <h4>Poster V1</h4>
-                        <h5>$23.99</h5>
-                      </div>
-                    </div>
-                  </Grid>
+                    </Grid>
+                  ))}
                 </Grid>
               </Box>
             </div>
