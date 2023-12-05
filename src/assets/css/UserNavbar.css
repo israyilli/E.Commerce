@@ -6,7 +6,7 @@
   position: relative;
   z-index: 999;
 }
-.bigContainer .userNavbar {
+.bigContainer .userNav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,7 +15,7 @@
   position: absolute;
   top: 0;
 }
-.bigContainer .userNavbar h1 a {
+.bigContainer .userNav h1 a {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   letter-spacing: 3px;
@@ -23,33 +23,33 @@
   text-decoration: none;
   color: black;
 }
-.bigContainer .userNavbar ul {
+.bigContainer .userNav ul {
   list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0;
 }
-.bigContainer .userNavbar ul li {
+.bigContainer .userNav ul li {
   margin: 0;
   padding: 0;
   line-height: 100px;
   padding: 0 20px;
 }
-.bigContainer .userNavbar ul li :hover {
+.bigContainer .userNav ul li :hover {
   color: #74a84a;
 }
-.bigContainer .userNavbar ul li a {
+.bigContainer .userNav ul li a {
   text-decoration: none;
   color: #000000;
   font-family: Roboto, sans-serif;
   font-weight: inherit;
   letter-spacing: 2px;
 }
-.bigContainer .userNavbar ul .bag {
+.bigContainer .userNav ul .bag {
   padding-right: 0;
 }
-.bigContainer .userNavbar ul .bag sup {
+.bigContainer .userNav ul .bag sup {
   background-color: black;
   color: white;
   padding: 4px 9px;

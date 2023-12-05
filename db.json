@@ -43,54 +43,6 @@
   ],
   "users": [
     {
-      "name": "John",
-      "surname": "Smith",
-      "email": "john.smith@example.com",
-      "password": "SecurePass123",
-      "orders": [],
-      "isAdmin": true,
-      "balance": 120.5,
-      "basket": [],
-      "favorites": [],
-      "id": "1"
-    },
-    {
-      "name": "Alice",
-      "surname": "Johnson",
-      "email": "alice.johnson@example.com",
-      "password": "StrongPass456",
-      "orders": [],
-      "isAdmin": false,
-      "balance": 75,
-      "basket": [],
-      "favorites": [],
-      "id": "2"
-    },
-    {
-      "name": "Robert",
-      "surname": "Williams",
-      "email": "robert.williams@example.com",
-      "password": "SafePassword789",
-      "orders": [],
-      "isAdmin": false,
-      "balance": 200.2,
-      "basket": [],
-      "favorites": [],
-      "id": "3"
-    },
-    {
-      "name": "Emily",
-      "surname": "Davis",
-      "email": "emily.davis@example.com",
-      "password": "SecretPass999",
-      "orders": [],
-      "isAdmin": false,
-      "balance": 50.5,
-      "basket": [],
-      "favorites": [],
-      "id": "4"
-    },
-    {
       "name": "Michael",
       "surname": "Taylor",
       "email": "michael.taylor@example.com",

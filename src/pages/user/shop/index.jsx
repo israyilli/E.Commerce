@@ -46,7 +46,7 @@ function Shop() {
   return (
     <>
       <section className="shop">
-        <hr />
+        <hr style={{ padding: "50px" }} />
         <div className="container">
           <div className="left">
             <form action="">

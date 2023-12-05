@@ -7,26 +7,16 @@ import { faBagShopping, faUser } from "@fortawesome/free-solid-svg-icons";
 import { useSelector } from "react-redux";
 
 function UserNavbar() {
+  const MyBasket = useSelector((state) => state.basket.basket);
+  console.log(MyBasket);
 
-// let result=0
-// useEffect(() => {
-  const MyWishlist = useSelector((state) => state.wishlist.wishlist);
-  console.log(MyWishlist);
-  
-  // Calculate the quantity
-  const quantity = MyWishlist ? MyWishlist.length : 0;
+  const quantity = MyBasket ? MyBasket.length : 0;
   console.log(quantity);
-// result=quantity
-// }, [JSON.parse(localStorage.getItem("wishlist"))])
 
-
-
- 
-  
   return (
     <>
       <div className="bigContainer">
-        <div className="userNavbar">
+        <div className="userNav">
           <h1>
             <Link to="/">EARTH STORE</Link>
           </h1>
