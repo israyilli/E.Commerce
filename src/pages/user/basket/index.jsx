@@ -3,7 +3,7 @@ import "./../../../assets/style/Basket.scss";
 // import { IconName } from "react-icons/ai";
 import { TiDeleteOutline } from "react-icons/ti";
 import { useDispatch } from "react-redux";
-import { handleMinus,handlePlus } from "../../../Config/BasketSlice";
+import { handleMinus, handlePlus } from "../../../Config/BasketSlice";
 
 function Basket() {
   const dispatch = useDispatch();
@@ -34,7 +34,6 @@ function Basket() {
                     <td>
                       <div className="cancel">
                         <button>
-                          {" "}
                           <TiDeleteOutline className="CancelCart" />
                         </button>
                       </div>

@@ -155,13 +155,13 @@ function Shop() {
                               style={{ color: "#2C541D", fontSize: "15px" }}
                             />
                           </button>
-                          <button className="heart" onClick={()=> handleWish(x)}>
+                          <button
+                            className="heart"
+                            onClick={() => handleWish(x)}
+                          >
                             <HeartOutlined />
                           </button>
-                          <img
-                            src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster5-1000x1000.jpg"
-                            alt=""
-                          />
+                          <img src={x.image} alt="" />
                         </div>
                         <div className="article">
                           <h6 className="posters">{x.category}</h6>

@@ -121,13 +121,6 @@ function Index() {
               </Formik>
             </div>
             <div className="switch-login">
-              {/* <p
-                onClick={() => {
-                  navigate("/register");
-                }}
-              >
-                Or Create An Account
-              </p> */}
               <Link to="/register">register</Link>
             </div>
           </div>
