@@ -66,10 +66,15 @@ function AdminHome() {
         >
           Add Product
         </Button>
-{
-
-}
-        <TableContainer style={{border:"3px solid red", padding:"50px",margin:"60px 0",backgroundColor:"#E2E8F0"}}>
+        {}
+        <TableContainer
+          style={{
+            border: "3px solid red",
+            padding: "50px",
+            margin: "60px 0",
+            backgroundColor: "#E2E8F0",
+          }}
+        >
           <Table>
             <Thead>
               <Tr>
@@ -89,7 +94,7 @@ function AdminHome() {
                   <Td>
                     <img
                       src={element.image}
-                      alt={element.name}
+                      alt=""
                       style={{ width: "50px", height: "50px" }}
                     />
                   </Td>
@@ -129,7 +134,14 @@ function AdminHome() {
       </div>
 
       <div className="container" style={{ paddingTop: "70px" }}>
-        <TableContainer style={{border:"3px solid red", padding:"50px",margin:"60px 0",backgroundColor:"#E2E8F7"}}>
+        <TableContainer
+          style={{
+            border: "3px solid red",
+            padding: "50px",
+            margin: "60px 0",
+            backgroundColor: "#E2E8F7",
+          }}
+        >
           <Table>
             <Thead>
               <Tr>
@@ -146,7 +158,7 @@ function AdminHome() {
               {user.map((element) => (
                 <Tr key={element.id}>
                   <Td>{element.id}</Td>
-                  <Td>{element.username}</Td>
+                  <Td>{element.name}</Td>
                   <Td>{element.surname}</Td>
                   <Td>{element.password}</Td>
                   <Td>{element.email}</Td>

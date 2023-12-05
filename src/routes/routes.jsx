@@ -42,7 +42,7 @@ export const routes = [
         element: <Login />,
       },
       {
-        path: "register",
+        path: "/register",
         element: <Register />,
       },
       {

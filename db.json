@@ -41,7 +41,6 @@
       "image": "https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2021/08/PostcardV6.jpg"
     }
   ],
-
   "users": [
     {
       "name": "John",
@@ -224,14 +223,6 @@
       "surname": "nazirli",
       "password": "naz",
       "email": "khanimnazirli@gmail.com"
-    },
-    {
-      "id": "33",
-      "name": "laman",
-      "surname": "nazirli",
-      "password": "laman1723@",
-      "email": "lemannazirli8@gmail.com",
-      "isAdmin": true
     }
   ]
 }

@@ -1,6 +1,5 @@
 import { Container } from "react-bootstrap";
 import "../../../assets/style/Register.scss";
-
 import * as Yup from "yup";
 import { Formik, Field, Form } from "formik";
 import React, { useState, useEffect } from "react";
@@ -21,8 +20,6 @@ const Login = Yup.object().shape({
 });
 
 function index() {
- 
-
   return (
     <div className="login">
       <title>Login Page</title>
@@ -43,8 +40,8 @@ function index() {
                 validateOnBlur={false}
                 validateOnChange={false}
                 validationSchema={Login}
-                onSubmit={ (values) => {
-                console.log(values);
+                onSubmit={(values) => {
+                  console.log(values);
                 }}
               >
                 {({ errors, touched }) => (

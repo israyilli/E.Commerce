@@ -1,15 +1,11 @@
 import { Container } from "react-bootstrap";
 import "../../../assets/style/Login.scss";
-
+// import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import { Formik, Field, Form } from "formik";
 import React, { useState } from "react";
 import axios from "axios";
-
-import useHistory, { Link } from "use-history";
-
-
-
+import { Link } from "react-router-dom";
 
 const LoginSchema = Yup.object().shape({
   username: Yup.string().required("Please enter a username"),
@@ -22,8 +18,8 @@ const LoginSchema = Yup.object().shape({
 });
 
 function Index() {
+  // const navigate = useNavigate();
   const [error, setError] = useState(null);
-  const history = useHistory();
 
   const submitHandler = async (values) => {
     try {
@@ -33,7 +29,7 @@ function Index() {
       });
 
       console.log("Login successful", response.data);
-      history.push("/home"); 
+      history.push("/home");
     } catch (err) {
       console.error("Login failed", err);
       setError("Invalid username or password");
@@ -125,7 +121,14 @@ function Index() {
               </Formik>
             </div>
             <div className="switch-login">
-              <Link to={"/register"}> Or Create An Account</Link>
+              {/* <p
+                onClick={() => {
+                  navigate("/register");
+                }}
+              >
+                Or Create An Account
+              </p> */}
+              <Link to="/register">register</Link>
             </div>
           </div>
         </Container>
